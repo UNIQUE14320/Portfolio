@@ -1,0 +1,431 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-deep: #12151c;
+  --color-brand-surface: #151822;
+  --color-brand-slate: #1a1e2b;
+  --color-brand-steel: #232838;
+  --color-brand-silver: #a0a8be;
+  --color-brand-ice: #f1f5f9;
+}
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* GPU Hardware Acceleration & 60 FPS Compositing */
+  .neu-card,
+  .neu-flat,
+  .neu-btn,
+  .neu-inset,
+  .neu-input,
+  button,
+  a {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
+  /* Fluid typography & readability scaling for mobile */
+  @media (max-width: 640px) {
+    html {
+      font-size: 15px;
+    }
+    p, li, span {
+      line-height: 1.65 !important;
+    }
+  }
+
+  body {
+    background-color: #12151c;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* ==========================================================================
+   NEUMORPHISM (SOFT UI) SYSTEM UTILITIES & EFFECTS
+   ========================================================================== */
+
+/* Dark Mode Neumorphic Cards & Raised Containers */
+body:not(.light-mode) .neu-card,
+body:not(.light-mode) .neu-flat {
+  background: #151822 !important;
+  box-shadow: 8px 8px 20px #0c0e13, -8px -8px 20px #1e2231 !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+body:not(.light-mode) .neu-card:hover,
+body:not(.light-mode) .neu-flat:hover {
+  box-shadow: 10px 10px 24px #0a0b0f, -10px -10px 24px #202535 !important;
+}
+
+/* Dark Mode Inset / Recessed Fields */
+body:not(.light-mode) .neu-inset,
+body:not(.light-mode) .neu-input {
+  background: #111319 !important;
+  box-shadow: inset 5px 5px 12px #0a0b0e, inset -5px -5px 12px #181b24 !important;
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Dark Mode Neumorphic Buttons */
+body:not(.light-mode) .neu-btn {
+  background: #181c28 !important;
+  box-shadow: 5px 5px 14px #0c0e13, -5px -5px 14px #242a3d !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f1f5f9 !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body:not(.light-mode) .neu-btn:hover {
+  box-shadow: 7px 7px 18px #090a0f, -7px -7px 18px #272d41 !important;
+  background: #1a1e2b !important;
+}
+
+body:not(.light-mode) .neu-btn:active {
+  box-shadow: inset 4px 4px 10px #0a0b0e, inset -4px -4px 10px #1c202e !important;
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Light Mode Neumorphic Cards & Raised Containers */
+body.light-mode .neu-card,
+body.light-mode .neu-flat {
+  background: #e8eef6 !important;
+  box-shadow: 8px 8px 20px #c2c9d6, -8px -8px 20px #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+body.light-mode .neu-card:hover,
+body.light-mode .neu-flat:hover {
+  box-shadow: 10px 10px 24px #b8c0d0, -10px -10px 24px #ffffff !important;
+}
+
+/* Light Mode Inset / Recessed Fields */
+body.light-mode .neu-inset,
+body.light-mode .neu-input {
+  background: #e1e7f0 !important;
+  box-shadow: inset 5px 5px 12px #bec5d1, inset -5px -5px 12px #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Light Mode Neumorphic Buttons */
+body.light-mode .neu-btn {
+  background: #e8eef6 !important;
+  box-shadow: 5px 5px 14px #c2c9d6, -5px -5px 14px #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  color: #0f172a !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-mode .neu-btn:hover {
+  box-shadow: 7px 7px 18px #b8c0d0, -7px -7px 18px #ffffff !important;
+  background: #edf3fc !important;
+}
+
+body.light-mode .neu-btn:active {
+  box-shadow: inset 4px 4px 10px #bec5d1, inset -4px -4px 10px #ffffff !important;
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Custom Soft Neumorphic Grid Background */
+.futuristic-bg {
+  background-color: #12151c;
+  background-image: 
+    radial-gradient(ellipse 80% 80% at 50% -20%, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0)),
+    radial-gradient(circle at 50% 50%, #151822, #12151c),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+  background-position: 0 0, 0 0, -1px -1px, -1px -1px;
+}
+
+/* ==========================================================================
+   DEFAULT DARK MODE (NEUMORPHIC DARK THEME)
+   ========================================================================== */
+body:not(.light-mode) {
+  background-color: #12151c !important;
+  color: #f1f5f9 !important;
+}
+
+body:not(.light-mode) .futuristic-bg {
+  background-color: #12151c !important;
+}
+
+body:not(.light-mode) nav {
+  background-color: rgba(18, 21, 28, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 6px 6px 18px #0c0e13, -6px -6px 18px #1e2231 !important;
+}
+
+/* Background Color Conversions for Neumorphic Dark Theme */
+body:not(.light-mode) .bg-\[\#06141B\] {
+  background-color: #12151c !important;
+}
+
+body:not(.light-mode) .bg-\[\#11212D\] {
+  background-color: #151822 !important;
+  box-shadow: 8px 8px 20px #0c0e13, -8px -8px 20px #1e2231 !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+body:not(.light-mode) .bg-\[\#253745\] {
+  background-color: #191d2a !important;
+  box-shadow: inset 3px 3px 8px #0d0f15, inset -3px -3px 8px #222738 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body:not(.light-mode) .bg-\[\#4A5C6A\] {
+  background-color: #232838 !important;
+  box-shadow: 3px 3px 8px #0d0f15, -3px -3px 8px #2d3348 !important;
+}
+
+/* Border Color Conversions for Neumorphic Dark Theme */
+body:not(.light-mode) .border-\[\#253745\] {
+  border-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+body:not(.light-mode) .border-\[\#4A5C6A\] {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Text Color Conversions for Neumorphic Dark Theme */
+body:not(.light-mode) .text-\[\#CCD0CF\] {
+  color: #f1f5f9 !important;
+}
+
+body:not(.light-mode) .text-\[\#9BA8AB\] {
+  color: #a0a8be !important;
+}
+
+/* Glowing Ambient Particles */
+@keyframes cyberGlowPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+.animate-cyber-glow {
+  animation: cyberGlowPulse 8s ease-in-out infinite;
+}
+
+/* Button & Interactive Element Active Click Feedback */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+.btn-click-effect {
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-click-effect:active {
+  transform: scale(0.96) translateY(1px) !important;
+}
+
+/* Hide scrollbar for clean horizontal tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ==========================================================================
+   LIGHT MODE OVERRIDES (NEUMORPHIC SOFT LIGHT THEME)
+   ========================================================================== */
+body.light-mode {
+  background-color: #e8eef6 !important;
+  color: #0f172a !important;
+}
+
+body.light-mode .futuristic-bg {
+  background-color: #e8eef6 !important;
+  background-image: 
+    radial-gradient(ellipse 80% 80% at 50% -20%, rgba(255, 255, 255, 0.9), rgba(232, 238, 246, 0)),
+    radial-gradient(circle at 50% 50%, #f0f5fc, #e8eef6),
+    linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px) !important;
+}
+
+/* Light Mode Navigation */
+body.light-mode nav {
+  background-color: rgba(232, 238, 246, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 6px 6px 18px #c2c9d6, -6px -6px 18px #ffffff !important;
+}
+
+/* Background Color Conversions for Light Neumorphic Theme */
+body.light-mode .bg-\[\#06141B\] {
+  background-color: #e8eef6 !important;
+}
+
+body.light-mode .bg-\[\#11212D\] {
+  background-color: #e8eef6 !important;
+  box-shadow: 8px 8px 20px #c2c9d6, -8px -8px 20px #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.light-mode .bg-\[\#253745\] {
+  background-color: #e1e7f0 !important;
+  box-shadow: inset 3px 3px 8px #bec5d1, inset -3px -3px 8px #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+body.light-mode .bg-\[\#4A5C6A\] {
+  background-color: #d6deeb !important;
+  box-shadow: 3px 3px 8px #b8c1d1, -3px -3px 8px #ffffff !important;
+}
+
+/* Skill Percentage Badges and Progress Bars in Light Mode */
+body.light-mode .skill-level-badge {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border: 1px solid #94a3b8 !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2) !important;
+}
+
+body.light-mode .skill-progress-fill {
+  background-color: #0f172a !important;
+  box-shadow: 0 0 8px rgba(15, 23, 42, 0.4) !important;
+}
+
+/* Border Color Conversions */
+body.light-mode .border-\[\#253745\] {
+  border-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.light-mode .border-\[\#4A5C6A\] {
+  border-color: rgba(200, 210, 225, 0.8) !important;
+}
+
+/* Text Color Conversions */
+body.light-mode .text-\[\#CCD0CF\] {
+  color: #1e293b !important;
+}
+
+body.light-mode .text-\[\#9BA8AB\] {
+  color: #475569 !important;
+}
+
+body.light-mode .text-slate-100,
+body.light-mode .text-slate-200 {
+  color: #0f172a !important;
+}
+
+/* Text Gradient Conversions in Light Mode */
+body.light-mode .text-transparent {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+
+body.light-mode .from-white {
+  --tw-gradient-from: #0f172a var(--tw-gradient-from-position) !important;
+}
+
+body.light-mode .via-\[\#CCD0CF\] {
+  --tw-gradient-via: #334155 var(--tw-gradient-via-position) !important;
+}
+
+body.light-mode .to-\[\#9BA8AB\] {
+  --tw-gradient-to: #64748b var(--tw-gradient-to-position) !important;
+}
+
+/* Card Shadow & Hover Enhancements in Neumorphic Light Mode */
+body.light-mode .shadow-lg,
+body.light-mode .shadow-xl,
+body.light-mode .shadow-2xl {
+  box-shadow: 8px 8px 22px #c2c9d6, -8px -8px 22px #ffffff !important;
+}
+
+/* Light Mode Hover Background Overrides */
+body.light-mode [class*="hover:bg-[#253745]"]:hover,
+body.light-mode .hover\:bg-\[\#253745\]:hover,
+body.light-mode .hover\:bg-\[\#253745\]\/50:hover,
+body.light-mode .hover\:bg-\[\#253745\]\/60:hover,
+body.light-mode .hover\:bg-\[\#253745\]\/80:hover {
+  background-color: #e1e7f0 !important;
+}
+
+body.light-mode [class*="hover:bg-[#4A5C6A]"]:hover,
+body.light-mode .hover\:bg-\[\#4A5C6A\]:hover {
+  background-color: #d6deeb !important;
+}
+
+body.light-mode .hover\:bg-\[\#06141B\]:hover {
+  background-color: #e8eef6 !important;
+}
+
+body.light-mode .hover\:text-white:hover {
+  color: #0f172a !important;
+}
+
+/* Interactive Buttons in Light Mode */
+body.light-mode button.bg-\[\#11212D\],
+body.light-mode a.bg-\[\#11212D\] {
+  background-color: #e8eef6 !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+  color: #0f172a !important;
+  box-shadow: 5px 5px 14px #c2c9d6, -5px -5px 14px #ffffff !important;
+}
+
+body.light-mode button.bg-\[\#11212D\]:hover,
+body.light-mode a.bg-\[\#11212D\]:hover {
+  background-color: #edf3fc !important;
+  box-shadow: 7px 7px 18px #b8c0d0, -7px -7px 18px #ffffff !important;
+}
+
+body.light-mode a.bg-\[\#CCD0CF\] {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+body.light-mode a.bg-\[\#CCD0CF\] span,
+body.light-mode a.bg-\[\#CCD0CF\] svg {
+  color: #ffffff !important;
+}
+
+/* Forms & Modal Inputs in Light Mode */
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select {
+  background-color: #e1e7f0 !important;
+  box-shadow: inset 4px 4px 9px #bec5d1, inset -4px -4px 9px #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  color: #0f172a !important;
+}
+
+body.light-mode input::placeholder,
+body.light-mode textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* Marquee Moving Line Text Styles */
+body:not(.light-mode) .marquee-text,
+body:not(.light-mode) .marquee-text span {
+  color: #ffffff !important;
+}
+
+body.light-mode .marquee-text,
+body.light-mode .marquee-text span {
+  color: #000000 !important;
+}
+
+
+
