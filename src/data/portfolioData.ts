@@ -141,7 +141,7 @@ export const EDUCATION_DATA: EducationItem[] = [
     year: '2020 - 2022',
     score: 'Percentage: 72%',
     details: 'Completed higher secondary education with focus on science and analytical mathematics.',
-    specials: ['Mathematics', 'Science Stream']
+    specials: ['Mathematics', 'Commerce Stream']
   },
   {
     id: 'class-10',
