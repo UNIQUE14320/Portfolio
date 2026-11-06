@@ -15,7 +15,7 @@ export const DEVELOPER_INFO = {
   linkedinHandle: "shubhamgawade39",
   portfolioUrl: "https://unique14320.github.io/Portfolio",
   leetcodeUrl: "https://leetcode.com/u/unique14320",
-  driveCertifications: "https://drive.google.com",
+  driveCertifications: "https://drive.google.com/drive/folders/15wuA2CQK6O_FMcvaKZSdvb6fvUP2v5gA?usp=drive_link",
   quickStats: [
     { label: "NIMCET AIR", value: "7160", badge: "All India Rank" },
     { label: "MAH MCA CET", value: "83rd %ile", badge: "State Percentile" },
