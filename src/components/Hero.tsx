@@ -268,7 +268,7 @@ export const Hero: React.FC<HeroProps> = ({
 
                 <div className="p-3 rounded-2xl bg-[#06141B] border border-[#253745] flex flex-col">
                   <span className="text-[11px] font-semibold text-[#9BA8AB] uppercase tracking-wider">MAH MCA CET</span>
-                  <span className="text-xl sm:text-2xl font-black text-[#CCD0CF] mt-0.5">83rd %ile</span>
+                  <span className="text-xl sm:text-2xl font-black text-[#CCD0CF] mt-0.5">94th %ile</span>
                   <span className="text-[10px] text-[#9BA8AB] mt-1">State Percentile</span>
                 </div>
               </div>

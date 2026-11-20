@@ -5,7 +5,7 @@ export const DEVELOPER_INFO = {
   handle: "SHUBHAM",
   title: "Software Developer | Full-Stack Development | AI-Driven Applications",
   tagline: "Building High-Performance Full-Stack Applications & Intelligent Voice-Controlled AI Systems",
-  bio: "BBA (Computer Application) graduate with a CGPA of 7.48, an 83rd percentile score in MAH MCA CET, and an All India Rank of 7160 in NIMCET. Skilled in Python, Java, SQL, HTML, CSS, JavaScript, React, and Node.js, with hands-on experience in full-stack development and building AI-driven applications.",
+  bio: "BBA (Computer Application) graduate with a CGPA of 7.48, a 94th percentile score in MAH MCA CET, and an All India Rank of 7160 in NIMCET. Skilled in Python, Java, SQL, HTML, CSS, JavaScript, React, and Node.js, with hands-on experience in full-stack development and building AI-driven applications.",
   location: "Pune, Maharashtra, India",
   email: "gawadeshubham859@gmail.com",
   phone: "9960388027",
@@ -18,7 +18,7 @@ export const DEVELOPER_INFO = {
   driveCertifications: "https://drive.google.com/drive/folders/15wuA2CQK6O_FMcvaKZSdvb6fvUP2v5gA?usp=drive_link",
   quickStats: [
     { label: "NIMCET AIR", value: "7160", badge: "All India Rank" },
-    { label: "MAH MCA CET", value: "83rd %ile", badge: "State Percentile" },
+    { label: "MAH MCA CET", value: "94th %ile", badge: "State Percentile" },
     { label: "BBA-CA CGPA", value: "7.48 / 10", badge: "SPPU Pune" },
     { label: "Projects Completed", value: "10+", badge: "Production-Ready" },
   ]
@@ -104,9 +104,9 @@ export const ACADEMICS_DATA: AcademicAchievement[] = [
   },
   {
     id: 'mah-cet',
-    title: '83rd Percentile in MAH MCA CET',
+    title: '94th Percentile in MAH MCA CET',
     subtitle: 'State Level Entrance Examination',
-    score: '83rd %ile',
+    score: '94th %ile',
     scoreLabel: 'Percentile Score',
     description: 'Top-tier performance in state-level computer applications entrance test.',
     highlight: true

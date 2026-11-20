@@ -72,7 +72,7 @@ export const generateResumePdf = () => {
   doc.setFontSize(8.5);
   doc.setTextColor(...textDark);
   
-  const summaryText = "BBA (Computer Application) graduate with a CGPA of 7.48, and 83rd percentile score in MAH MCA CET, and an All India Rank of 7160 in NIMCET. Skilled in Python, Java, SQL, HTML, CSS, JavaScript, React, and Node.js, with hands-on experience in full-stack development and building AI-driven applications. Eager to contribute to real-world software projects while continuing to grow as a developer.";
+  const summaryText = "BBA (Computer Application) graduate with a CGPA of 7.48, and 94th percentile score in MAH MCA CET, and an All India Rank of 7160 in NIMCET. Skilled in Python, Java, SQL, HTML, CSS, JavaScript, React, and Node.js, with hands-on experience in full-stack development and building AI-driven applications. Eager to contribute to real-world software projects while continuing to grow as a developer.";
   
   const summaryLines = doc.splitTextToSize(summaryText, contentWidth);
   doc.text(summaryLines, margin, y);
