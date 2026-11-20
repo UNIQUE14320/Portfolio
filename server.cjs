@@ -163,7 +163,7 @@ ${cleanMessage}`)}`;
       return "The Hospital Management System is an enterprise Java web application built using Servlets, JSP, Hibernate ORM, and MySQL. It features role-based authentication, patient registration, appointment scheduling, and automated billing workflows.";
     }
     if (p.includes("rank") || p.includes("nimcet") || p.includes("cet") || p.includes("exam") || p.includes("score")) {
-      return "Shubham achieved All India Rank 7160 in the national NIMCET competitive examination and scored 83rd Percentile in the MAH MCA CET exam, demonstrating strong analytical and mathematical problem-solving skills.";
+      return "Shubham achieved All India Rank 7160 in the national NIMCET competitive examination and scored 94th Percentile in the MAH MCA CET exam, demonstrating strong analytical and mathematical problem-solving skills.";
     }
     if (p.includes("contact") || p.includes("hire") || p.includes("email") || p.includes("phone")) {
       return "You can reach Shubham Gawade directly at gawadeshubham859@gmail.com or call +91 9900388027. He is actively seeking Software Developer roles in Pune and remote positions.";
@@ -186,7 +186,7 @@ Shubham's Info:
 - Location: Pune, Maharashtra, India. Email: gawadeshubham859@gmail.com, Phone: +91 9900388027
 - GitHub: github.com/UNIQUE14320, LinkedIn: linkedin.com/in/shubhamgawade39
 - Education: BBA (Computer Applications) from Savitribai Phule Pune University (CGPA: 7.46)
-- Achievements: NIMCET All India Rank 7160, MAH MCA CET 83rd Percentile
+- Achievements: NIMCET All India Rank 7160, MAH MCA CET 94th Percentile
 - Skills: Python (90%), Core & Advanced Java (JSP/Servlet, Hibernate ORM), React.js, Node.js, Express, JavaScript, MySQL, MongoDB, SQLite, Android Dev, Git/GitHub.
 - Projects:
   1. Ryuk Voice AI Assistant (Speech recognition, Whisper, LLM function calling, SQLite context storage)
